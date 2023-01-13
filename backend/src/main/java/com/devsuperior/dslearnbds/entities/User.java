@@ -20,6 +20,9 @@ public class User {
 
     private String password;
 
+    @OneToMany(mappedBy = "user")
+    private Set<Notification> notifications = new HashSet<>();
+
     @ManyToMany
     @JoinTable(name = "tb_user_role",
     joinColumns = @JoinColumn(name = "user_id"),
