@@ -30,6 +30,9 @@ public class Offer implements Serializable {
     @OneToMany(mappedBy = "offer")
     private Set<Resource> resources = new HashSet<>();
 
+    @OneToMany(mappedBy = "offer")
+    private Set<Topic> topics = new HashSet<>();
+
     public Offer() {}
 
     public Offer(Long id, String edition, Instant startMoment, Instant endMoment, Course course) {
@@ -82,6 +85,10 @@ public class Offer implements Serializable {
 
     public Set<Resource> getResources() {
         return resources;
+    }
+
+    public Set<Topic> getTopics() {
+        return topics;
     }
 
     @Override

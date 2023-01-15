@@ -1,5 +1,7 @@
 package com.devsuperior.dslearnbds.entities;
 
+import com.devsuperior.dslearnbds.entities.pk.EnrollmentPK;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
@@ -26,7 +28,10 @@ public class Enrollment implements Serializable {
 
     @ManyToMany(mappedBy = "enrollmentsDone")
     private Set<Lesson> lessonsDone = new HashSet<>();
-    
+
+    @OneToMany(mappedBy = "enrollment")
+    private Set<Deliver> deliveries = new HashSet<>();
+
     public Enrollment() {}
 
     public Enrollment(Offer offer, User user, Instant enrollMoment, Instant refundMoment, boolean available, boolean onlyUpdate) {
@@ -84,6 +89,14 @@ public class Enrollment implements Serializable {
 
     public void setOnlyUpdate(boolean onlyUpdate) {
         this.onlyUpdate = onlyUpdate;
+    }
+
+    public Set<Lesson> getLessonsDone() {
+        return lessonsDone;
+    }
+
+    public Set<Deliver> getDeliveries() {
+        return deliveries;
     }
 
     @Override

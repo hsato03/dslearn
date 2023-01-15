@@ -1,10 +1,12 @@
-package com.devsuperior.dslearnbds.entities;
+package com.devsuperior.dslearnbds.entities.pk;
+
+import com.devsuperior.dslearnbds.entities.Offer;
+import com.devsuperior.dslearnbds.entities.User;
 
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.Set;
 
 @Embeddable
 public class EnrollmentPK implements Serializable {
