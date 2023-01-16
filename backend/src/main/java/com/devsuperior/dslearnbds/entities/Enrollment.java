@@ -14,6 +14,7 @@ import java.util.Set;
 public class Enrollment implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
     @EmbeddedId
     private EnrollmentPK id = new EnrollmentPK();
 
