@@ -6,9 +6,9 @@ INSERT INTO tb_role (authority) VALUES ('ROLE_STUDENT');
 INSERT INTO tb_role (authority) VALUES ('ROLE_INSTRUCTOR');
 INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
 
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('First notification to User', TIMESTAMP WITH TIME ZONE '2023-01-12T23:56:00Z', TRUE, 'https://user-notification/first', 3);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('First notification to User', TIMESTAMP WITH TIME ZONE '2023-01-12T23:56:00Z', TRUE, 'https://user-notification/first', 1);
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Second notification to User', TIMESTAMP WITH TIME ZONE '2023-01-12T23:57:00Z', TRUE, 'https://user-notification/second', 1);
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Third notification to User', TIMESTAMP WITH TIME ZONE '2023-01-12T23:59:00Z', FALSE, 'https://user-notification/third', 2);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Third notification to User', TIMESTAMP WITH TIME ZONE '2023-01-12T23:59:00Z', FALSE, 'https://user-notification/third', 1);
 
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
